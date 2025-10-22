@@ -1,0 +1,16 @@
+name: crosswalk
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - opencv
+  - matplotlib
+  - pip
+  - pip:
+    - ultralytics
+    - pyttsx3

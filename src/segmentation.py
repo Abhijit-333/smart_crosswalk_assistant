@@ -18,7 +18,7 @@ def detect_crosswalk(image_path):
     lines = cv2.HoughLinesP(edges, 1, np.pi/180, threshold=100,
                             minLineLength=100, maxLineGap=10)
 
-    # Draw lines
+    # highlight green for white lines in crosswalk
     if lines is not None:
         for line in lines:
             x1, y1, x2, y2 = line[0]

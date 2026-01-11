@@ -5,10 +5,10 @@ import cv2
 model = YOLO("yolov8n.pt")  # small version for speed
 
 # Open webcam
-cap = cv2.VideoCapture(0)
+capture = cv2.VideoCapture(0)
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = capture.read()
     if not ret:
         break
 
@@ -23,5 +23,6 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
-cap.release()
-cv2.destroyAllWindows()
+capture.release()
+cv2.destroyAllWindows() 
+
